@@ -26,7 +26,7 @@ export default {
     data() {
         return {
             loginForm: {
-                userCode: "",
+                userName: "",
                 userPassword: ""
             },
             loginFormRules: {
@@ -66,8 +66,8 @@ export default {
                             localStorage.setItem("refreshToken", resp.data.data.refreshToken);
                             //跳转
                             setTimeout(() => {
-                                this.$router.push( '/home' )
-                            }, 3000)
+                                this.$router.push('/home')
+                            }, 1000)
                         } else {
                             this.$message.error(resp.data.message);
                         }
